@@ -1,4 +1,4 @@
-package com.yernaryelemess.spring.springboot.springboot.entity;
+package com.yernaryelemess.spring.springboot.spring_data_jpa.entity;
 
 import jakarta.persistence.*;
 

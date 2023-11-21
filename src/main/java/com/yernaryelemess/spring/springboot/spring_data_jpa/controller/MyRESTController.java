@@ -1,7 +1,8 @@
-package com.yernaryelemess.spring.springboot.springboot.controller;
+package com.yernaryelemess.spring.springboot.spring_data_jpa.controller;
 
-import com.yernaryelemess.spring.springboot.springboot.entity.Employee;
-import com.yernaryelemess.spring.springboot.springboot.service.EmployeeService;
+
+import com.yernaryelemess.spring.springboot.spring_data_jpa.entity.Employee;
+import com.yernaryelemess.spring.springboot.spring_data_jpa.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -62,5 +63,11 @@ public class MyRESTController {
         employeeService.deleteEmployee(id);
 
         return "Employee with ID = " + id + " was deleted";
+    }
+
+    @GetMapping("/employees/name/{name}")
+    public List<Employee> showAllEmployeesByName(@PathVariable String name){
+        List<Employee> employeeListByName = employeeService.findAllByName(name);
+        return employeeListByName;
     }
 }

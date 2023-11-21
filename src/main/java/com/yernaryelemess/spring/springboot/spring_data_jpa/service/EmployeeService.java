@@ -1,8 +1,10 @@
-package com.yernaryelemess.spring.springboot.springboot.service;
+package com.yernaryelemess.spring.springboot.spring_data_jpa.service;
 
 
 
-import com.yernaryelemess.spring.springboot.springboot.entity.Employee;
+
+
+import com.yernaryelemess.spring.springboot.spring_data_jpa.entity.Employee;
 
 import java.util.List;
 
@@ -15,4 +17,5 @@ public interface EmployeeService {
 
     public  void  deleteEmployee(int employer_id);
 
+    public  List<Employee> findAllByName(String name);
 }
